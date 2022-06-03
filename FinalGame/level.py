@@ -134,7 +134,7 @@ class Level:
     def check_deaths(self):
         #pause = False
         if self.player.health <= 0:
-            #self.game_paused = True
+            self.game_paused = True
             self.kind_pause = 'PLAYER'
         else:
             self.kind_pause = self.kind_pause
