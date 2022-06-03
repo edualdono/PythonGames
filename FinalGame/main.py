@@ -35,12 +35,12 @@ class Game:
                         self.level.toggle_menu(self.kind_pause)
 
             if self.level.game_paused:
-                pygame.mixer.pause()
+                pygame.mixer.music.pause()
             else:
-                pygame.mixer.unpause()
+                pygame.mixer.music.unpause()
 
             if self.level.boss_alert and not self.boss_moment:
-                pygame.mixer.pause()
+                pygame.mixer.music.pause()
                 pygame.mixer.music.unload()
                 pygame.mixer.music.load('./audio/boss_theme.wav')
                 pygame.mixer.music.set_volume(0.4)

@@ -82,8 +82,8 @@ class UI:
         #pygame.draw.rect(self.display_surface,HEALTH_COLOR,self.helth_bar_rect)
         self.mostrar_barra(player.health, player.stats['health'],self.helth_bar_rect,HEALTH_COLOR)
         self.mostrar_barra(player.energy, player.stats['energia'],self.energy_bar_rect,ENERGY_COLOR)
-        #if boss_alert:
-        self.mostrar_barra(
+        if boss_alert:
+            self.mostrar_barra(
                 boss.health, 1000, self.helth_enemy_bar_rect, HEALTH_COLOR)
         self.mostrar_pausa()
         self.mostrar_exp(player.exp)
